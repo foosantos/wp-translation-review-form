@@ -13,4 +13,5 @@
  */
 
 include_once plugin_dir_path( __FILE__ ) . 'src/cpt/review-forms.php';
+include_once plugin_dir_path( __FILE__ ) . 'src/taxonomy/locale.php';
 
