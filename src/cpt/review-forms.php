@@ -39,7 +39,7 @@ function review_forms() {
 	$args = array(
 		'label'                 => __( 'Review Form', 'wp-translation-review-form' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'comments', 'revisions' ),
+		'supports'              => array( 'title', 'comments', 'revisions' ),
 		'taxonomies'            => array( ),
 		'hierarchical'          => false,
 		'public'                => true,
