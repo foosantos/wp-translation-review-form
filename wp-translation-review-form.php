@@ -15,3 +15,13 @@
 include_once plugin_dir_path( __FILE__ ) . 'src/cpt/review-forms.php';
 include_once plugin_dir_path( __FILE__ ) . 'src/taxonomy/locale.php';
 include_once plugin_dir_path( __FILE__ ) . 'src/metabox/review-forms.php';
+
+function wptrf_show_review_form() {
+
+	if ( is_singular( 'review_forms' ) ) {
+		include_once plugin_dir_path( __FILE__ ) . 'templates/review-form.php';
+	}
+}
+
+add_action( 'the_content', 'wptrf_show_review_form' );
+
