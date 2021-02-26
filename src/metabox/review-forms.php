@@ -28,7 +28,7 @@ function wptrf_review_issues() {
 
 	$cmb-> add_field( array(
 		'name' => __( 'Feedback message', 'wp-translation-review-form' ),
-		'description' => __( 'Write a short description of the issue', 'wp-translation-review-form' ),
+		'description' => __( 'Write the user instructions', 'wp-translation-review-form' ),
 		'id'   => 'wptrf_message',
 		'type' => 'wysiwyg',
 		'options' => array(
