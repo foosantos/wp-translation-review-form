@@ -26,11 +26,11 @@
 
 	</div>
 
-	<?php $selected_issues = $_GET['i']; ?>
-
 	<ul class="issues-results">
 		<?php foreach( $selected_issues as $value ) { ?>
+			<?php if( array_key_exists($value, $issues) ) { ?>
 				<li> <?php echo $issues[$value]['title']; ?>: <?php echo $issues[$value]['description']; ?> </li>
+			<?php } ?>
 		<?php } ?>
 	</ul>
 
