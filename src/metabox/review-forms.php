@@ -26,6 +26,26 @@ function wptrf_review_issues() {
 		// 'closed'     => true, // Keep the metabox closed by default
 	) );
 
+	$cmb-> add_field( array(
+		'name' => __( 'Feedback message', 'wp-translation-review-form' ),
+		'description' => __( 'Write a short description of the issue', 'wp-translation-review-form' ),
+		'id'   => 'wptrf_message',
+		'type' => 'wysiwyg',
+		'options' => array(
+			'wpautop' => true, // use wpautop?
+			'media_buttons' => false, // show insert/upload button(s)
+			'textarea_name' => $editor_id, // set the textarea name to something different, square brackets [] can be used here
+			'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+			'tabindex' => '',
+			'editor_css' => '', // intended for extra styles for both visual and HTML editors buttons, needs to include the `<style>` tags, can use "scoped".
+			'editor_class' => '', // add extra class(es) to the editor textarea
+			'teeny' => true, // output the minimal editor config used in Press This
+			'dfw' => false, // replace the default fullscreen with DFW (needs specific css)
+			'tinymce' => true, // load TinyMCE, can be used to pass settings directly to TinyMCE using an array()
+			'quicktags' => false // load Quicktags, can be used to pass settings directly to Quicktags using an array()
+		),
+	) );
+
 	$group_field_id = $cmb->add_field( array(
 		'id'          => 'wptrf_review_issues_group',
 		'type'        => 'group',
